@@ -1,6 +1,6 @@
 require 'akamai_alerts/alert'
 
-class AlertReadError < Alert
+class AlertOriginReadError < Alert
   ALERT_TEMPLATE = JSON.parse(<<~EOS)
     {
       "definitionId": "",
