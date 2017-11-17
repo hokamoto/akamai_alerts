@@ -1,6 +1,6 @@
 require 'akamai_alerts/alert'
 
-class AlertStatusCodes < Alert
+class AlertEdgeStatusCodes < Alert
   ALERT_TEMPLATE = JSON.parse(<<~EOS)
     {
       "definitionId": "",
