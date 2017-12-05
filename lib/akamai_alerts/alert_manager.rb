@@ -8,7 +8,7 @@ require 'csv'
 class AlertManager
   def initialize(edgerc = '~/.edgerc', section = 'default')
     @http = Akamai::Edgegrid::HTTP.new(get_host(edgerc, section), 443)
-    @http.setup_from_edgerc(section: section)
+    @http.setup_from_edgerc({filename: edgerc, section: section})
     @baseuri = URI('https://' + @http.host)
   end
 
